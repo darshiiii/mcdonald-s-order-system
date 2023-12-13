@@ -505,36 +505,6 @@ def switch_page(page_number):
         raise ValueError("Invalid page number")
 
 
-
-
-# ... (previous code remains unchanged)
-
-def update_total():
-    global sum_total
-    sum_total = 0
-
-    # Add total from each page entry
-    try:
-        sum_total += int(page4.sum_entry.get())
-    except ValueError:
-        pass
-    try:
-        sum_total += int(page5.sum_entry1.get())
-    except ValueError:
-        pass
-    try:
-        sum_total += int(page6.sum_entry2.get())
-    except ValueError:
-        pass
-    try:
-        sum_total += int(page7.sum_entry3.get())
-    except ValueError:
-        pass
-    try:
-        sum_total += int(page8.sum_entry4.get())
-    except ValueError:
-        pass
-
     # Update total entry in page 9
     total_entry.delete(0, "end")
     total_entry.insert(0, str(sum_total))
